@@ -18,3 +18,7 @@
 
 # Ignore application configuration
 /config/application.yml
+
+/config/environments/production.rb
+
+.DS_Store
