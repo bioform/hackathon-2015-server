@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @investor_update.title %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @investor_update.summary %>
+</p>
+
+<%= link_to 'Edit', edit_investor_update_path(@investor_update) %> |
+<%= link_to 'Back', investor_updates_path %>

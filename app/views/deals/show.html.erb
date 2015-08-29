@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @deal.user_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @deal.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @deal.address %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @deal.amount %>
+</p>
+
+<p>
+  <strong>Term:</strong>
+  <%= @deal.term %>
+</p>
+
+<p>
+  <strong>Loan position:</strong>
+  <%= @deal.loan_position %>
+</p>
+
+<p>
+  <strong>Funded date:</strong>
+  <%= @deal.funded_date %>
+</p>
+
+<p>
+  <strong>Purchase price:</strong>
+  <%= @deal.purchase_price %>
+</p>
+
+<p>
+  <strong>Current value:</strong>
+  <%= @deal.current_value %>
+</p>
+
+<p>
+  <strong>Borrowers equity:</strong>
+  <%= @deal.borrowers_equity %>
+</p>
+
+<p>
+  <strong>Completion value:</strong>
+  <%= @deal.completion_value %>
+</p>
+
+<%= link_to 'Edit', edit_deal_path(@deal) %> |
+<%= link_to 'Back', deals_path %>

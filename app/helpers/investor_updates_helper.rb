@@ -1,0 +1,2 @@
+module InvestorUpdatesHelper
+end
