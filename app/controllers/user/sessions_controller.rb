@@ -7,14 +7,10 @@ class User::SessionsController < Devise::SessionsController
   # end
 
   # POST /resource/sign_in
-  # def create
-  #   super do |resource|
-  #     respond_with do |format|
-  #       format.json  {render :json => {:success => true, user: resource} }
-  #       format.any  {super}
-  #     end
-  #   end
-  # end
+  def create
+    logger.debug("PARAMS: #{params.inspect}")
+    super
+  end
 
   # DELETE /resource/sign_out
   # def destroy
