@@ -5,7 +5,7 @@ class DashboardController < ApplicationController
 
 	def interest_owed
 		@total_interest = 0.0
-		current_user.deals.each do |deal|
+		current_user.deals.where(state: :funded).each do |deal|
 			@total_interest += deal.interest_owed
 		end
 	end

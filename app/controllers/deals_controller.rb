@@ -1,8 +1,6 @@
 class DealsController < ApplicationController
   before_action :set_deal, only: [:show, :edit, :update, :destroy]
 
-  before_filter :authenticate_user! 
-
   # GET /deals
   # GET /deals.json
   def index
