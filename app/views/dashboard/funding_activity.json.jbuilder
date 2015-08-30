@@ -1,4 +1,6 @@
-json.array!(@current_deals) do |deal|
-  json.extract! deal, :id, :amount, :state, :updated_at
-  json.url deal_url(deal, format: :json)
+json.current_deals @current_deals do |deal|
+  json.id deal.id
+  json.amount number_to_currency(deal.amount) 
+  json.state deal.state 
+  json.updated_at deal.updated_at
 end

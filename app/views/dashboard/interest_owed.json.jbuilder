@@ -1,1 +1,1 @@
-json.interest_owed @total_interest
+json.interest_owed number_to_currency(@total_interest)

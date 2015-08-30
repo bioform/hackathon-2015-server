@@ -1,1 +1,1 @@
-json.amount_borrowed @sum
+json.amount_borrowed number_to_currency(@sum)
