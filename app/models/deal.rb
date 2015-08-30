@@ -35,4 +35,9 @@ class Deal < ActiveRecord::Base
 
   end
 
+  def interest_owed
+		days = (DateTime.now.to_date - deal.updated_at.to_date).to_i
+		return  deal.amount * ((deal.rate / 100) / 365) * days
+	end
+
 end
