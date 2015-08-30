@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+	include Gravtastic
+	gravtastic
+
 	has_many :deals
 
   # Include default devise modules. Others available are:
