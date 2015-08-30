@@ -1,13 +1,16 @@
 class DashboardController < ApplicationController
 	def amount_borrowed
-		@sum = 0
-		current_user.deals.each do |deal|
-			@sum += deal.amount
-		end
-		@sum.to_json
+		@sum = current_user.deals.sum(:amount)
 	end
 
 	def interest_owed
-		@deals = current_user.deals
+		@total_interest = 0.0
+		current_user.deals.each do |deal|
+			@total_interest += deal.interest_owed
+		end
+	end
+
+	def funding_activity
+		@current_deals = current_user.deals.where(state: :funding)
 	end
 end
