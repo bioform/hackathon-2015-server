@@ -69,6 +69,6 @@ class InvestorUpdatesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def investor_update_params
-      params.require(:investor_update).permit(:title, :summary)
+      params.require(:investor_update).permit(:title, :summary, :image)
     end
 end

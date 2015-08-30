@@ -55,5 +55,7 @@
   <%= @deal.completion_value %>
 </p>
 
+<%= image_tag @deal.image.url(:medium) %><br />
+
 <%= link_to 'Edit', edit_deal_path(@deal) %> |
 <%= link_to 'Back', deals_path %>

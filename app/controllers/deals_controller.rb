@@ -25,6 +25,7 @@ class DealsController < ApplicationController
   # POST /deals
   # POST /deals.json
   def create
+    rate = rand(10.0..20.0).round(2)
     @deal = Deal.new(deal_params)
 
     respond_to do |format|
@@ -70,6 +71,6 @@ class DealsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def deal_params
-      params.require(:deal).permit(:user_id, :name, :address, :amount, :term, :loan_position, :funded_date, :purchase_price, :current_value, :borrowers_equity, :completion_value)
+      params.require(:deal).permit(:user_id, :name, :address, :amount, :term, :loan_position, :funded_date, :purchase_price, :current_value, :borrowers_equity, :completion_value, :image, :rate)
     end
 end

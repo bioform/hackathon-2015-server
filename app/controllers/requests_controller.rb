@@ -4,7 +4,7 @@ class RequestsController < ApplicationController
   # GET /requests
   # GET /requests.json
   def index
-    @requests = Request.all
+    @requests = current_user.requests
   end
 
   # GET /requests/1
@@ -15,7 +15,6 @@ class RequestsController < ApplicationController
   # GET /requests/new
   def new
     @request = Request.new
-    @request.as_json
   end
 
   # GET /requests/1/edit

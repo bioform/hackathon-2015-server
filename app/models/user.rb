@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
 	gravtastic
 
 	has_many :deals
+	has_many :requests
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
