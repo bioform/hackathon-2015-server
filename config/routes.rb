@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   get 'dashboard/amount_borrowed'
   get 'dashboard/interest_owed'
+  get 'dashboard/funding_activity'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
