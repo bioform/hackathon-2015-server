@@ -4,7 +4,7 @@ class RequestsController < ApplicationController
   # GET /requests
   # GET /requests.json
   def index
-    @requests = current_user.requests
+    @requests = current_user.requests.where(state: :new)
   end
 
   # GET /requests/1
