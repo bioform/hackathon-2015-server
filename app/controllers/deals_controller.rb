@@ -27,7 +27,6 @@ class DealsController < ApplicationController
   # POST /deals
   # POST /deals.json
   def create
-    rate = rand(10.0..20.0).round(2)
     @deal = Deal.new(deal_params)
 
     respond_to do |format|
