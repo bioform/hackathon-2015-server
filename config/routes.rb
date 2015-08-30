@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :investor_updates
   resources :requests
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: 'user/sessions'
+  }
   resources :deals
 
   root 'deals#index'

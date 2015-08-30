@@ -9,4 +9,16 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+         
+         
+   def to_json(options)
+     {
+       id: self.id,
+       email: self.email,
+       name: self.name,
+       phone_number: self.phone_number,
+       last_sign_in_at: self.last_sign_in_at,
+       gravatar_url: self.gravatar_url
+     }.to_json
+   end         
 end
